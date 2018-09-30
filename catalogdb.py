@@ -1,9 +1,6 @@
-# Database code for the DB Forum.
-# 
-# This is NOT the full solution!
+# Database code for the DB catalog.
 
 import psycopg2 
-import bleach
 
 DBNAME = "news"
 

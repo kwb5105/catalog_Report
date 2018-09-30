@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # 
-# A buggy web service in need of a database.
+# web service for displaying Catalog reports.
 
 from flask import Flask, request, redirect, url_for
 
@@ -8,7 +8,7 @@ from catalogdb import get_top_articles, get_top_authors, get_top_errors
 
 app = Flask(__name__)
 
-# HTML template for the forum page
+# HTML template for the catalog page
 HTML_WRAP = '''\
 <!DOCTYPE html>
 <html>
