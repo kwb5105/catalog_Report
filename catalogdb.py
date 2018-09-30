@@ -33,13 +33,3 @@ def get_top_errors():
   topErrors = c.fetchall()
   db.close()
   return topErrors
-
-
-'''def add_post(content):
-  """Add a post to the 'database' with the current timestamp."""
-  db = psycopg2.connect(database=DBNAME)
-  c = db.cursor()
-  c.execute("insert into posts values (%s)", (bleach.clean(content),)) # Almost but not quite.
-  db.commit()
-  db.close()
-'''
