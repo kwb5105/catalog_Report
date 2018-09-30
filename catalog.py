@@ -17,12 +17,13 @@ HTML_WRAP = '''\
     <style>
       h1, form { text-align: center; }
       textarea { width: 400px; height: 100px; }
-      div.post { border: 1px solid #999;
+      div.catalog { border: 1px solid #999;
                  padding: 10px 10px;
                  margin: 10px 20%%; }
       hr.postbound { width: 50%%; }
-      em.ArticleType { color: #000}
-      em.AuthorType { color: #000 }
+      strong.ArticleType { color: #000}
+      strong.AuthorType { color: #000 }
+      strong.errorLogType { color: #000 }
     </style>
   </head>
   <body>
@@ -33,15 +34,15 @@ HTML_WRAP = '''\
 
 # HTML template for an individual article
 ARTICLES = '''\
-    <div class=post><em class=ArticleType>Article: %s</em><br>Views: %s</div>
+    <div class=catalog><strong class=ArticleType>Article: %s</strong><br>Views: %s</div>
 '''
 # HTML template for an individual author
 AUTHORS = '''\
-    <div class=post><em class=AuthorType>Author: %s</em><br>Views: %s</div>
+    <div class=catalog><strong class=AuthorType>Author: %s</strong><br>Views: %s</div>
 '''
 # HTML template for an error result lists
 ERRORLOG = '''\
-    <div class=post><em class=AuthorType>Day: %s</em><br>Error Percent: %s</div>
+    <div class=catalog><strong class=errorLogType>Day: %s</strong><br>Error Percent: %s</div>
 '''
 
 @app.route('/', methods=['GET'])
